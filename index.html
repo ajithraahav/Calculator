@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-box">
+            <input class="output-value" type="text" name="" id="output_val" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            <input class="input-value" type="text" name="" id="input_val" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"> 
+                <table>
+                    <tr>
+                        <td><button onclick="all_clearVal()">AC</button></td>
+                        <td><button onclick="clearVal()">C</button></td>
+                        <td><button onclick="getVal('/')" class="sym-btn">/</button></td>
+                        <td><button onclick="getVal('*')" class="sym-btn">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="getVal('7')" >7</button></td>
+                        <td><button onclick="getVal('8')" >8</button></td>
+                        <td><button onclick="getVal('9')" >9</button></td>
+                        <td><button onclick="getVal('-')"  class="sym-btn">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="getVal(4)" >4</button></td>
+                        <td><button onclick="getVal('5')" >5</button></td>
+                        <td><button onclick="getVal('6')" >6</button></td>
+                        <td rowspan="2"><span><button onclick="getVal('+')"  style="height: 100px;" class="sym-btn">+</button></span></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="getVal('1')" >1</button></td>
+                        <td><button onclick="getVal('2')" >2</button></td>
+                        <td><button onclick="getVal('3')" >3</button></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><button onclick="getVal('0')" >0</button></td>
+                        <td><button onclick="getVal('.')" >.</button></td>
+                        <td colspan="2"><span><button onclick="finalVal()"  style="width: 100px;" class="sym-btn">=</button></span></td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+    
+    <script src="/calculator.js"></script>
+</body>
+</html>
