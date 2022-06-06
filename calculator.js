@@ -1,7 +1,5 @@
-var arr = [];
 var num_val;
-var result;
-function getVal(str_val,operator_val) {
+function getVal(str_val) {
   document.getElementById("input_val").value += str_val;
 }
 
@@ -26,4 +24,20 @@ function clearVal() {
 function finalVal() {
   num_val = document.getElementById("input_val").value;
   document.getElementById("output_val").value = eval(num_val);
+}
+
+function colorMode() {
+
+  // var body_cls = document.body;  
+  // var calc_box = document.getElementById("calc-id");
+  // calc_box.classList.toggle("light-mode");
+  // body_cls.classList.toggle("light-mode-body");
+
+  var theme = document.getElementsByTagName('link')[0];
+
+  if (theme.getAttribute('href') == 'light.css') {
+    theme.setAttribute('href', 'dark.css');
+  } else {
+    theme.setAttribute('href', 'light.css');
+  }
 }
